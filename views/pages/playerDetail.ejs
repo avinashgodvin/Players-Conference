@@ -1,0 +1,14 @@
+<!-- general information on sports meet -->
+<section class="container pad-right-left">
+  <div class="row">
+    <div class="col-md-8 p-4">
+      <div class="player-list-title"><%= player.sport %> Player</div>
+      <div class="player-list-name mb-2"><%= player.name %></div>
+      <img class="img-fluid" src="<%= player.image %>" />
+      <p class="mt-4"><%- player.description %></p>
+    </div>
+
+      <%- include("./partials/pixgrid") %>
+    
+  </div>
+</section>

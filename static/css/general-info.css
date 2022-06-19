@@ -1,0 +1,126 @@
+.title-color-font {
+  font-size: 1.9rem;
+  color: #dd4f53;
+  font-weight: 400;
+}
+
+.sub-title-color-font {
+  font-size: 1.4rem;
+  color: #dd4f53;
+  font-weight: 400;
+}
+
+/* css for pix grid  */
+
+.pixgrid {
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.pixgrid img {
+  display: block;
+  padding: 5px;
+  float: left;
+  width: 33.33%;
+  border-radius: 8px;
+}
+
+/* footer section css   */
+.footer-bottom {
+  border-top: 1px solid #666;
+  background: #1e1e1e;
+}
+.copyright-text p {
+  color: #ccc;
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+
+.social-link {
+  padding-left: 0;
+}
+
+.align-text-to-center {
+  text-align: center;
+}
+
+.pad-right-left {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.social-link li {
+  display: inline-block;
+  padding: 0.3rem;
+  padding-right: 0.5rem;
+}
+.social-link li a {
+  text-decoration: none;
+  color: #126fd3;
+}
+
+@media (max-width: 1071px) {
+  .pad-right-left {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* players list css  */
+
+.players-list-image {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50% !important ;
+}
+
+.player-list-title {
+  line-height: 2rem;
+  font-size: 1.7rem;
+}
+
+.player-list-name {
+  line-height: 2rem;
+  font-size: 1.2rem;
+  color: #dd4f53;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+/* single player details css  */
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* feedback css  */
+.float-right {
+  float: right;
+}
+
+.maincontent {
+  line-height: 220%;
+}
+
+.feedback-line-height {
+  line-height: 180%;
+}
+
+.in-color-feedback {
+  font-weight: 100;
+}
+
+.blue-color {
+  color: #126fd3;
+}
+
+.align-center-txt {
+  text-align: center;
+}
+
+.margin-for-btn {
+  margin: 1rem;
+}

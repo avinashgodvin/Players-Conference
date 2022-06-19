@@ -1,0 +1,87 @@
+<div class="container pad-right-left">
+  <div class="row mt-4 mb-4">
+    <div class="col-md-4">
+      <div class="maincontent">
+        <h2 class="in-color in-color-feedback">Send us feedback</h2>
+
+        <% if(locals.errors){ %>
+        <div class="alert alert-danger">
+          <% errors.forEach(function(error){%>
+          <li><%= error.msg %></li>
+          <%}) %>
+        </div>
+        <%} %> <% if(locals.successMessage){ %>
+        <div class="alert alert-success">
+          <p><%= successMessage%></p>
+        </div>
+        <%} %>
+        <form class="feedback-form" method="POST" action="/feedback">
+          <div class="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your name"
+              name="name"
+              minlength="3"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Title</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter title of your feedback"
+              name="title"
+              minlength="3"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Messgae</label>
+            <textarea
+              type="text"
+              class="form-control"
+              placeholder="Enter your message , then press submit button"
+              rows="6"
+              name="message"
+              minlength="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary float-right mt-3 mb-3">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-8 px-5">
+      <h2 class="in-color in-color-feedback mb-4 align-center-txt">
+        Recent feedbacks
+      </h2>
+
+      <% feedback.forEach(function(item){ %>
+      <div class="feedback-item feedback-line-height">
+        <div class="feedback-head">
+          <h4><%= item.title %></h4>
+          <small> by <span class="blue-color"><%= item.name %></span> </small>
+        </div>
+        <div class="feedback-message"><%= item.message %></div>
+        <hr />
+      </div>
+
+      <% }) %>
+    </div>
+  </div>
+</div>

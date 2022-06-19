@@ -1,0 +1,35 @@
+<!-- general information on sports meet -->
+<section class="container pad-right-left">
+  <div class="row">
+    <div class="col-md-8 p-4">
+      <% topPlayers.forEach(function(player){ %>
+      <div class="player my-5">
+        <div class="player-list-title"><%= player.sport %> Player</div>
+        <div class="player-list-name mb-2">
+          <a class="no-decoration" href="/players/<%= player.shortname %>"
+            ><%= player.name %></a
+          >
+        </div>
+        <div class="row mt-1 player-card">
+          <div class="col-sm-3 px-5">
+            <img class="players-list-image" src="<%= player.imgpath %>" />
+          </div>
+          <div class="col-sm-9">
+            <p>
+              Virat Kohli is an Indian international cricketer and former
+              captain of the India national cricket team. He plays for Delhi in
+              domestic cricket and Royal Challengers Bangalore in the IPL as a
+              right-handed batsman.
+            </p>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+
+      <%- include("./partials/pixgrid") %>
+    
+  </div>
+</section>
+
+<!-- =========================================================================== -->

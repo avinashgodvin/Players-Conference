@@ -1,0 +1,29 @@
+<!-- top players  container -->
+<article class="color-bg p-1 pb-3">
+  <div class="container pad-right-left">
+    <div class="row px-5">
+      <% topPlayers.forEach(function(player){ %>
+      <div class="col-md text-center line-height-160 mt-3">
+        <p><span class="game-name"> In <%= player.sport %> </span></p>
+        <p>
+          <a
+            class="player-name in-color text-decoration-off"
+            href="/players/<%= player.shortname %>"
+            ><%= player.name %></a
+          >
+        </p>
+
+        <a
+          class="player-name in-color text-decoration-off"
+          href="/players/<%= player.shortname %>"
+          ><img class="player-image" src="<%= player.imgpath %>"
+        /></a>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</article>
+
+<!-- top players container ends here -->
+
+<!-- =========================================================================== -->
