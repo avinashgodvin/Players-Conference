@@ -61,6 +61,6 @@ app.use((err, request, response, next) => {
   response.render("error");
 });
 
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
   console.log(`Listening on port ${port}`);
 });
